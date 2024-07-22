@@ -10,13 +10,13 @@
     <main class="contenido">
         <section class="entrada_texto">
             <img id="logo" src="assets/Logo.svg" alt="Logo">
-            <textarea name="textarea" rows="10" cols="50">Ingrese el texto aquí</textarea>
+            <textarea id="areaTexto" name="textarea" rows="10" cols="50">Ingrese el texto aquí</textarea>
             <div class="entrada_texto_info">
                 <img id="icono_info" src="assets/information.svg" alt="Información"> 
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="entrada_texto_botones">
-                <button class="botones" id="boton_encriptar">Encriptar</button>
+                <button class="botones" id="boton_encriptar" onclick="encriptarTexto();">Encriptar</button>
                 <button class="botones" id="boton_desencriptar">Desencriptar</button>
             </div>
         </section>
@@ -33,5 +33,7 @@
         </section>
     </main>
     <footer>Desarrollado por Brian</footer>
+
+    <script src="scripts/encriptador.js"></script>
 </body>
 </html>
