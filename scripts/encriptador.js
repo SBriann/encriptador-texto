@@ -23,6 +23,7 @@ function encriptarTexto () {
         }
 
         modificarValorResultado(mensajeEncriptado);
+        limpiarAreaTexto();
     } else {
         // Notificar
         console.log("No es válido el texto digitado")
