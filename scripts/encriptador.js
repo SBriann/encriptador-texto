@@ -21,7 +21,8 @@ function encriptarTexto () {
             }
             mensajeEncriptado = mensajeEncriptado + caracter;
         }
-        console.log(mensajeEncriptado);
+
+        modificarValorResultado(mensajeEncriptado);
     } else {
         // Notificar
         console.log("No es válido el texto digitado")
