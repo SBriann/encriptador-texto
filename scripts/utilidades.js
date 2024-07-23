@@ -20,3 +20,8 @@ function validarTexto(texto) {
 function modificarValorResultado(resultado) {
     document.getElementById('resultado').innerText = resultado;
 }
+
+// Limpiar el area del texto
+function limpiarAreaTexto() {
+    document.getElementById('areaTexto').value = "";
+}
