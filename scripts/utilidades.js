@@ -15,3 +15,8 @@ function validarTexto(texto) {
     }
     return esValido;
 }
+
+// Modificar valor del elemento resultado
+function modificarValorResultado(resultado) {
+    document.getElementById('resultado').innerText = resultado;
+}
