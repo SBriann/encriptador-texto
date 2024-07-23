@@ -1,7 +1,7 @@
 // Validar que el texto cumpla con las restricciones (NO mayusculas - NO caracteres especiales)
 function validarTexto(texto) {
     let esValido = true; // Valor a retornar
-    let listaCaracteres = texto.split(' '); // Lista caracteres (sin espacios) 
+    let listaCaracteres = texto.trim().split(' '); // Lista caracteres (sin espacios)
 
     // Ciclo para recorrer la lista de caracteres
     for (let caracter of listaCaracteres) {
