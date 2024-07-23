@@ -9,16 +9,21 @@ let encriptacion = {
 function encriptarTexto () {
     let mensajeRecibido = document.getElementById('areaTexto').value; // Valor recibido
     let mensajeEncriptado = ""; // Almacena mensaje encriptado
-    let listaCaracteres = mensajeRecibido.split(''); // Lista de caracteres
+    let esValido = validarTexto(mensajeRecibido); // Validacion mayusculas y caracteres especiales
 
-    // Ciclo para recorrer la lista de caracteres
-    for (let i = 0; i < listaCaracteres.length; i++) {
-        // Validacion de cada caracter con objeto encriptacion
-        if (listaCaracteres[i] in encriptacion){
-            mensajeEncriptado = mensajeEncriptado +  encriptacion[listaCaracteres[i]];
-            continue;
+    if (esValido) {
+        // Ciclo para evaluar cada caracter del mensaje recibido
+        for (let caracter of mensajeRecibido) {
+            // Validacion de cada caracter con objeto encriptacion
+            if (caracter in encriptacion){
+                mensajeEncriptado = mensajeEncriptado + encriptacion[caracter];
+                continue;
+            }
+            mensajeEncriptado = mensajeEncriptado + caracter;
         }
-        mensajeEncriptado = mensajeEncriptado + listaCaracteres[i];
+        console.log(mensajeEncriptado);
+    } else {
+        // Notificar
+        console.log("No es válido el texto digitado")
     }
-    console.log(mensajeEncriptado);
 }
