@@ -25,3 +25,8 @@ function modificarValorResultado(resultado) {
 function limpiarAreaTexto() {
     document.getElementById('areaTexto').value = "";
 }
+
+// Añadir el valor de la clase al elemento
+function añadirClaseElemento(elemento, valorClase) {
+    elemento.classList.add(valorClase);
+}
