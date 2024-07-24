@@ -21,7 +21,7 @@ function desencriptarTexto () {
             mensajeDesencriptado = mensajeDesencriptado.replace(expRegular, desencriptacion[llave]);
         }
 
-        console.log(mensajeDesencriptado);
+        modificarValorResultado(mensajeDesencriptado);
     } else {
         // Notificar
         console.log("No es válido el texto digitado")
