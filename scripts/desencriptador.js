@@ -22,6 +22,7 @@ function desencriptarTexto () {
         }
 
         modificarValorResultado(mensajeDesencriptado);
+        limpiarAreaTexto();
     } else {
         // Notificar
         console.log("No es válido el texto digitado")
