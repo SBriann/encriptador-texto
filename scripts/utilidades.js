@@ -1,3 +1,7 @@
+const CLASE_OCULTAR = "ocultar"; // Clase que oculta el elemento gracias al CSS definido
+const CLASE_TEXTO_VACIO = ".salida_texto_vacio"; // Clase del elemento que se muestra cuando no ha habido un mensaje aun
+const CLASE_RESULTADO = ".salida_texto_resultado" // Clase del elemento que muestra el resultado
+
 // Validar que el texto cumpla con las restricciones (NO mayusculas - NO caracteres especiales)
 function validarTexto(texto) {
     let esValido = true; // Valor a retornar
@@ -29,4 +33,9 @@ function limpiarAreaTexto() {
 // Añadir el valor de la clase al elemento
 function añadirClaseElemento(elemento, valorClase) {
     elemento.classList.add(valorClase);
+}
+
+// Eliminar el valor de la clase al elemento
+function eliminarClaseElemento(elemento, valorClase) {
+    elemento.classList.remove(valorClase);
 }
