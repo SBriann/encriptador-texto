@@ -17,12 +17,12 @@
             </div>
             <div class="entrada_texto_botones">
                 <button class="botones" id="boton_encriptar" onclick="encriptarTexto();">Encriptar</button>
-                <button class="botones" id="boton_desencriptar">Desencriptar</button>
+                <button class="botones" id="boton_desencriptar" onclick="desencriptarTexto();">Desencriptar</button>
             </div>
         </section>
         <section class="salida_texto">
             <div class="salida_texto_vacio">
-                <img id="imagen_nodata" src="assets/no-data.svg" alt="">
+                <img id="imagen_nodata" src="assets/no-data.svg" alt="No hay mensajes">
                 <p id="mensaje_titulo">Ningún mensaje fue encontrado</p>
                 <p id="mensaje_descripcion">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
@@ -35,6 +35,7 @@
     <footer>Desarrollado por Brian</footer>
 
     <script src="scripts/encriptador.js"></script>
+    <script src="scripts/desencriptador.js"></script>
     <script src="scripts/utilidades.js"></script>
 </body>
 </html>
