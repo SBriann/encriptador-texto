@@ -20,12 +20,14 @@ function desencriptarTexto () {
             let expRegular = new RegExp(llave, 'g');
             mensajeDesencriptado = mensajeDesencriptado.replace(expRegular, desencriptacion[llave]);
         }
-
+        
+        console.log(mensajeRecibido);
         modificarValorResultado(mensajeDesencriptado);
         limpiarAreaTexto();
+        añadirClaseElemento(document.querySelector(CLASE_TEXTO_VACIO), CLASE_OCULTAR); // Añade la clase definida en CLASE_OCULTAR
+        eliminarClaseElemento(document.querySelector(CLASE_RESULTADO), CLASE_OCULTAR); // Elimina la clase definida en CLASE_OCULTAR
     } else {
         // Notificar
-        console.log("No es válido el texto digitado")
-
+        console.log("No es válido el texto digitado");
     }
 }

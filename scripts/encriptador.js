@@ -24,8 +24,10 @@ function encriptarTexto () {
 
         modificarValorResultado(mensajeEncriptado);
         limpiarAreaTexto();
+        añadirClaseElemento(document.querySelector(CLASE_TEXTO_VACIO), CLASE_OCULTAR); // Añade la clase definida en CLASE_OCULTAR
+        eliminarClaseElemento(document.querySelector(CLASE_RESULTADO), CLASE_OCULTAR); // Elimina la clase definida en CLASE_OCULTAR
     } else {
         // Notificar
-        console.log("No es válido el texto digitado")
+        console.log("No es válido el texto digitado");
     }
 }
