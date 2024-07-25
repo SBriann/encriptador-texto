@@ -1,5 +1,6 @@
 const CLASE_OCULTAR = "ocultar"; // Clase que oculta el elemento gracias al CSS definido
 const CLASE_TEXTO_VACIO = ".salida_texto_vacio"; // Clase del elemento que se muestra cuando no ha habido un mensaje aun
+const CLASE_TEXTO_INVALIDO = ".salida_texto_error"; // Clase del elemento que se muestra cuando no se cumple el formato del texto
 const CLASE_RESULTADO = ".salida_texto_resultado" // Clase del elemento que muestra el resultado
 
 // Validar que el texto cumpla con las restricciones (NO mayusculas - NO caracteres especiales)
