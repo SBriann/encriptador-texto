@@ -25,9 +25,11 @@ function encriptarTexto () {
         modificarValorResultado(mensajeEncriptado);
         limpiarAreaTexto();
         añadirClaseElemento(document.querySelector(CLASE_TEXTO_VACIO), CLASE_OCULTAR); // Añade la clase definida en CLASE_OCULTAR
+        añadirClaseElemento(document.querySelector(CLASE_TEXTO_INVALIDO), CLASE_OCULTAR); // Añade la clase definida en CLASE_OCULTAR
         eliminarClaseElemento(document.querySelector(CLASE_RESULTADO), CLASE_OCULTAR); // Elimina la clase definida en CLASE_OCULTAR
-    } else {
-        // Notificar
-        console.log("No es válido el texto digitado");
+    } else { // Si no se cumple con el formato establecido se muestra un mensaje de error
+        añadirClaseElemento(document.querySelector(CLASE_TEXTO_VACIO), CLASE_OCULTAR); // Añade la clase definida en CLASE_OCULTAR
+        añadirClaseElemento(document.querySelector(CLASE_RESULTADO), CLASE_OCULTAR); // Añade la clase definida en CLASE_OCULTAR
+        eliminarClaseElemento(document.querySelector(CLASE_TEXTO_INVALIDO), CLASE_OCULTAR); // Elimina la clase definida en CLASE_OCULTAR
     }
 }
