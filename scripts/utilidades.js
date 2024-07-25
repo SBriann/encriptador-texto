@@ -3,6 +3,13 @@ const CLASE_TEXTO_VACIO = ".salida_texto_vacio"; // Clase del elemento que se mu
 const CLASE_TEXTO_INVALIDO = ".salida_texto_error"; // Clase del elemento que se muestra cuando no se cumple el formato del texto
 const CLASE_RESULTADO = ".salida_texto_resultado" // Clase del elemento que muestra el resultado
 
+class ObjetoModicar {
+    constructor(nombre, edad) {
+        this.elemento = nombre;
+        this.clase = edad;
+    }
+}
+
 // Validar que el texto cumpla con las restricciones (NO mayusculas - NO caracteres especiales)
 function validarTexto(texto) {
     let esValido = true; // Valor a retornar
@@ -29,6 +36,16 @@ function modificarValorResultado(resultado) {
 // Limpiar el area del texto
 function limpiarAreaTexto() {
     document.getElementById('areaTexto').value = "";
+}
+
+// Usa las funciones añadirClaseElemento y eliminarClaseElemento
+function modificarClaseElemento(listaAñadir, objetoEliminar) {
+    for (objetoAñadir of listaAñadir) {
+        añadirClaseElemento(document.querySelector(objetoAñadir.elemento), objetoAñadir.clase);
+    }
+
+    eliminarClaseElemento(document.querySelector(objetoEliminar.elemento), objetoEliminar.clase);
+
 }
 
 // Añadir el valor de la clase al elemento
