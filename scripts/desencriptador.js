@@ -13,6 +13,10 @@ function desencriptarTexto () {
 
     // Si no hay mensaje no se evalua nada
     if (mensajeRecibido.trim().length == 0) {
+        modificarClaseElemento(
+            [new ObjetoModicar(CLASE_TEXTO_INVALIDO, CLASE_OCULTAR), new ObjetoModicar(CLASE_RESULTADO, CLASE_OCULTAR)], // Elementos que se quieren ocultar
+            new ObjetoModicar(CLASE_TEXTO_VACIO, CLASE_OCULTAR) // Elemento que se quieren mostrar
+        )
         return;
     }
 
@@ -28,12 +32,14 @@ function desencriptarTexto () {
         
         modificarValorResultado(mensajeDesencriptado);
         limpiarAreaTexto();
-        añadirClaseElemento(document.querySelector(CLASE_TEXTO_VACIO), CLASE_OCULTAR); // Añade la clase definida en CLASE_OCULTAR
-        añadirClaseElemento(document.querySelector(CLASE_TEXTO_INVALIDO), CLASE_OCULTAR); // Añade la clase definida en CLASE_OCULTAR
-        eliminarClaseElemento(document.querySelector(CLASE_RESULTADO), CLASE_OCULTAR); // Elimina la clase definida en CLASE_OCULTAR
+        modificarClaseElemento(
+            [new ObjetoModicar(CLASE_TEXTO_VACIO, CLASE_OCULTAR), new ObjetoModicar(CLASE_TEXTO_INVALIDO, CLASE_OCULTAR)], // Elementos que se quieren ocultar
+            new ObjetoModicar(CLASE_RESULTADO, CLASE_OCULTAR) // Elemento que se quieren mostrar
+        )
     } else { // Si no se cumple con el formato establecido se muestra un mensaje de error
-        añadirClaseElemento(document.querySelector(CLASE_TEXTO_VACIO), CLASE_OCULTAR); // Añade la clase definida en CLASE_OCULTAR
-        añadirClaseElemento(document.querySelector(CLASE_RESULTADO), CLASE_OCULTAR); // Añade la clase definida en CLASE_OCULTAR
-        eliminarClaseElemento(document.querySelector(CLASE_TEXTO_INVALIDO), CLASE_OCULTAR); // Elimina la clase definida en CLASE_OCULTAR
+        modificarClaseElemento(
+            [new ObjetoModicar(CLASE_TEXTO_VACIO, CLASE_OCULTAR), new ObjetoModicar(CLASE_RESULTADO, CLASE_OCULTAR)], // Elementos que se quieren ocultar
+            new ObjetoModicar(CLASE_TEXTO_INVALIDO, CLASE_OCULTAR) // Elemento que se quieren mostrar
+        )
     }
 }
