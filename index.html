@@ -26,8 +26,13 @@
         <section class="salida_texto">
             <div class="salida_texto_vacio">
                 <img id="imagen_nodata" src="assets/no-data.svg" alt="No hay mensajes">
-                <p id="mensaje_titulo">Ningún mensaje fue encontrado</p>
-                <p id="mensaje_descripcion">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <p class="mensaje_titulo">Ningún mensaje fue encontrado</p>
+                <p class="mensaje_descripcion">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="salida_texto_error ocultar">
+                <img id="imagen_nodata" src="assets/formato-incorrecto.svg" alt="No hay mensajes">
+                <p class="mensaje_titulo">Formato incorrecto</p>
+                <p class="mensaje_descripcion">No se aceptan mayúsculas ni caracteres especiales.</p>
             </div>
             <div class="salida_texto_resultado ocultar">
                 <div id="resultado">Texto encriptado/desencriptado</div>
