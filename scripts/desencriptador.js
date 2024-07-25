@@ -11,6 +11,11 @@ function desencriptarTexto () {
     let mensajeDesencriptado = ""; // Almacena mensaje desencriptado
     let esValido = validarTexto(mensajeRecibido); // Validacion mayusculas y caracteres especiales
 
+    // Si no hay mensaje no se evalua nada
+    if (mensajeRecibido.trim().length == 0) {
+        return;
+    }
+
     if (esValido) {
         mensajeDesencriptado = mensajeRecibido;
         

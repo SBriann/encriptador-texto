@@ -9,6 +9,12 @@ let encriptacion = {
 function encriptarTexto () {
     let mensajeRecibido = document.getElementById('areaTexto').value; // Valor recibido
     let mensajeEncriptado = ""; // Almacena mensaje encriptado
+
+    // Si no hay mensaje no se evalua nada
+    if (mensajeRecibido.trim().length == 0) {
+        return;
+    }
+
     let esValido = validarTexto(mensajeRecibido); // Validacion mayusculas y caracteres especiales
 
     if (esValido) {
