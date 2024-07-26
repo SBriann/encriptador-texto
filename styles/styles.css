@@ -38,11 +38,20 @@
     margin-bottom: 52px;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--color-secundario-100);
 }
 
 .contenido {
+    max-width: 1400px;
+    margin: auto;
     display: grid;
     grid-template-areas: "entrada_texto salida_texto";
     grid-template-columns: 2fr 1fr;
