@@ -147,6 +147,15 @@ body {
     gap: 16px;
 }
 
+.salida_texto .salida_texto_copiado {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 16px;
+}
+
 .salida_texto .mensaje_titulo {
     font-family: "Inter", sans-serif;
     font-weight: bold;
