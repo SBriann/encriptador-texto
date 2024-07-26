@@ -13,8 +13,8 @@ function encriptarTexto () {
     // Si no hay mensaje no se evalua nada
     if (mensajeRecibido.trim().length == 0) {
         modificarClaseElemento(
-            [new ObjetoModicar(CLASE_TEXTO_INVALIDO, CLASE_OCULTAR), new ObjetoModicar(CLASE_RESULTADO, CLASE_OCULTAR)], // Elementos que se quieren ocultar
-            new ObjetoModicar(CLASE_TEXTO_VACIO, CLASE_OCULTAR) // Elemento que se quieren mostrar
+            [TEXTO_INVALIDO, RESULTADO, TEXTO_COPIADO], // Elementos que se quieren ocultar
+            TEXTO_VACIO // Elemento que se quiere mostrar
         )
         return;
     }
@@ -36,13 +36,13 @@ function encriptarTexto () {
         limpiarAreaTexto();
 
         modificarClaseElemento(
-            [new ObjetoModicar(CLASE_TEXTO_VACIO, CLASE_OCULTAR), new ObjetoModicar(CLASE_TEXTO_INVALIDO, CLASE_OCULTAR)], // Elementos que se quieren ocultar
-            new ObjetoModicar(CLASE_RESULTADO, CLASE_OCULTAR) // Elemento que se quieren mostrar
+            [TEXTO_VACIO, TEXTO_INVALIDO, TEXTO_COPIADO], // Elementos que se quieren ocultar
+            RESULTADO // Elemento que se quiere mostrar
         )
     } else { // Si no se cumple con el formato establecido se muestra un mensaje de error
         modificarClaseElemento(
-            [new ObjetoModicar(CLASE_TEXTO_VACIO, CLASE_OCULTAR), new ObjetoModicar(CLASE_RESULTADO, CLASE_OCULTAR)], // Elementos que se quieren ocultar
-            new ObjetoModicar(CLASE_TEXTO_INVALIDO, CLASE_OCULTAR) // Elemento que se quieren mostrar
+            [TEXTO_VACIO, RESULTADO, TEXTO_COPIADO], // Elementos que se quieren ocultar
+            TEXTO_INVALIDO // Elemento que se quiere mostrar
         )
     }
 }

@@ -1,14 +1,18 @@
-const CLASE_OCULTAR = "ocultar"; // Clase que oculta el elemento gracias al CSS definido
-const CLASE_TEXTO_VACIO = ".salida_texto_vacio"; // Clase del elemento que se muestra cuando no ha habido un mensaje aun
-const CLASE_TEXTO_INVALIDO = ".salida_texto_error"; // Clase del elemento que se muestra cuando no se cumple el formato del texto
-const CLASE_RESULTADO = ".salida_texto_resultado" // Clase del elemento que muestra el resultado
-
 class ObjetoModicar {
-    constructor(nombre, edad) {
-        this.elemento = nombre;
-        this.clase = edad;
+    constructor(elemento, clase) {
+        this.elemento = elemento;
+        this.clase = clase;
     }
 }
+
+const CLASE_OCULTAR = "ocultar"; // Clase que oculta el elemento gracias al CSS definido
+
+const TEXTO_VACIO = new ObjetoModicar(".salida_texto_vacio", CLASE_OCULTAR); // Elemento que se muestra cuando no ha habido un mensaje aun
+const TEXTO_INVALIDO = new ObjetoModicar(".salida_texto_error", CLASE_OCULTAR); // Elemento que se muestra cuando no se cumple el formato del texto
+const TEXTO_COPIADO = new ObjetoModicar(".salida_texto_copiado", CLASE_OCULTAR); // Elemento que se muestra cuando se ha copiado el texto
+const RESULTADO = new ObjetoModicar(".salida_texto_resultado", CLASE_OCULTAR); // Elemento que muestra el resultado
+
+
 
 // Validar que el texto cumpla con las restricciones (NO mayusculas - NO caracteres especiales)
 function validarTexto(texto) {
@@ -45,7 +49,6 @@ function modificarClaseElemento(listaAñadir, objetoEliminar) {
     }
 
     eliminarClaseElemento(document.querySelector(objetoEliminar.elemento), objetoEliminar.clase);
-
 }
 
 // Añadir el valor de la clase al elemento
