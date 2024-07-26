@@ -98,25 +98,30 @@ body {
     gap: 24px;
 }
 
-.entrada_texto .entrada_texto_botones #boton_encriptar {
+.entrada_texto .entrada_texto_botones #boton_encriptar:not(:disabled) {
     color: var(--color-secundario-100); 
     border-color: var(--color-primario-400);
     background-color: var(--color-primario-300);
 }
 
-.entrada_texto .entrada_texto_botones #boton_encriptar:hover {
+.entrada_texto .entrada_texto_botones #boton_encriptar:not(:disabled):hover {
     color: var(--color-secundario-100); 
     background-color: var(--color-primario-200);
 }
 
-.entrada_texto .entrada_texto_botones #boton_desencriptar  {
+.entrada_texto .entrada_texto_botones #boton_desencriptar:not(:disabled)  {
     border-color: var(--color-primario-300);
     background-color: var(--color-secundario-300);
     color: var(--color-primario-300);
 }
 
-.entrada_texto .entrada_texto_botones #boton_desencriptar:hover {
+.entrada_texto .entrada_texto_botones #boton_desencriptar:not(:disabled):hover {
     background-color: var(--color-secundario-100);
+}
+
+#boton_encriptar:disabled, #boton_desencriptar:disabled  {
+    background-color: var(--color-secundario-100);
+    cursor: not-allowed;
 }
 
 /* Estilos lado derecho (Mensaje mensaje no hallado, error y resultado) */
