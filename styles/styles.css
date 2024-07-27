@@ -87,8 +87,9 @@ body {
     font-size: 32px;
 }
 
-.entrada_texto .entrada_texto_info {
+.entrada_texto .entrada_texto_info, .entrada_texto .entrada_texto_nivel {
     margin-left: 200px;
+    margin-top: 10px;
     display: flex;
     gap: 8px;
     align-items: center;
@@ -99,6 +100,11 @@ body {
 
 .entrada_texto .entrada_texto_info #icono_info {
     height: 16px;
+}
+
+.entrada_texto .entrada_texto_nivel #nivel-select {
+    border-radius: 4px;
+    background-color: var(--color-secundario-100);
 }
 
 .entrada_texto .entrada_texto_botones {
@@ -232,6 +238,7 @@ footer {
 
     .entrada_texto #areaTexto, 
     .entrada_texto .entrada_texto_info,
+    .entrada_texto .entrada_texto_nivel,
     .entrada_texto .entrada_texto_botones  {
         margin-left: 40px;
     }
@@ -273,6 +280,7 @@ footer {
 
     .entrada_texto #areaTexto, 
     .entrada_texto .entrada_texto_info,
+    .entrada_texto .entrada_texto_nivel,
     .entrada_texto .entrada_texto_botones  {
         margin: 10px 40px;
     }
@@ -315,6 +323,7 @@ footer {
 
     .entrada_texto #areaTexto, 
     .entrada_texto .entrada_texto_info,
+    .entrada_texto .entrada_texto_nivel,
     .entrada_texto .entrada_texto_botones  {
         margin: 10px 10px;
     }
@@ -340,6 +349,7 @@ footer {
 
     .entrada_texto #areaTexto, 
     .entrada_texto .entrada_texto_info,
+    .entrada_texto .entrada_texto_nivel,
     .entrada_texto .entrada_texto_botones  {
         margin: 10px 4px;
     }

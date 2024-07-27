@@ -18,6 +18,14 @@
                 <img id="icono_info" src="assets/information.svg" alt="Información"> 
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
+            <div class="entrada_texto_nivel">
+                <label for="nivel-select">Nivel (des)encriptación:</label>
+                <select name="nivel-select" id="nivel-select">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
             <div class="entrada_texto_botones">
                 <button class="botones" id="boton_encriptar" onclick="encriptarTexto();">Encriptar</button>
                 <button class="botones" id="boton_desencriptar" onclick="desencriptarTexto();">Desencriptar</button>
