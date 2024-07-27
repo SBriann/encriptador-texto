@@ -22,15 +22,22 @@ function encriptarTexto () {
     let esValido = validarTexto(mensajeRecibido); // Validacion mayusculas y caracteres especiales
 
     if (esValido) {
-        // Ciclo para evaluar cada caracter del mensaje recibido
-        for (let caracter of mensajeRecibido) {
-            // Validacion de cada caracter con objeto encriptacion
-            if (caracter in encriptacion){
-                mensajeEncriptado = mensajeEncriptado + encriptacion[caracter];
-                continue;
+        // La cantidad de veces que se debe realizar la encriptacion de un mensaje
+        let nivelEncriptacion = parseInt(document.getElementById("nivel-select").value);
+        for (let i = 1; i <= nivelEncriptacion; i++) {
+            mensajeEncriptado = "";
+            // Ciclo para evaluar cada caracter del mensaje recibido
+            for (let caracter of mensajeRecibido) {
+                // Validacion de cada caracter con objeto encriptacion
+                if (caracter in encriptacion){
+                    mensajeEncriptado = mensajeEncriptado + encriptacion[caracter];
+                    continue;
+                }
+                mensajeEncriptado = mensajeEncriptado + caracter;
             }
-            mensajeEncriptado = mensajeEncriptado + caracter;
+            mensajeRecibido = mensajeEncriptado;
         }
+
 
         modificarValorResultado(mensajeEncriptado);
         limpiarAreaTexto();

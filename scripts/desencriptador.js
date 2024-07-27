@@ -22,12 +22,16 @@ function desencriptarTexto () {
 
     if (esValido) {
         mensajeDesencriptado = mensajeRecibido;
-        
-        // Ciclo para evaluar el valor de cada llave de desencriptacion
-        for (let llave in desencriptacion) {
-            // Expresion regular que indica que se reemplace todas las coincidencias
-            let expRegular = new RegExp(llave, 'g');
-            mensajeDesencriptado = mensajeDesencriptado.replace(expRegular, desencriptacion[llave]);
+
+        // La cantidad de veces que se debe realizar la encriptacion de un mensaje
+        let nivelEncriptacion = parseInt(document.getElementById("nivel-select").value);
+        for (let i = 1; i <= nivelEncriptacion; i++) {
+            // Ciclo para evaluar el valor de cada llave de desencriptacion
+            for (let llave in desencriptacion) {
+                // Expresion regular que indica que se reemplace todas las coincidencias
+                let expRegular = new RegExp(llave, 'g');
+                mensajeDesencriptado = mensajeDesencriptado.replace(expRegular, desencriptacion[llave]);
+            }
         }
         
         modificarValorResultado(mensajeDesencriptado);
