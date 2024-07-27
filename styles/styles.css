@@ -1,26 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-    --color-primario-100: #609ED4;
     --color-primario-200: #356EA9; 
     --color-primario-300: #0A3871;
     --color-primario-400: #072B61;
-    --color-primario-500: #052051;
 
     --color-secundario-100: #F3F5FC;
     --color-secundario-200: #EFF1FA; 
     --color-secundario-300: #E9ECF8;
-    --color-secundario-400: #AAB2D5;
-    --color-secundario-500: #757FB2;
-
-    --color-terciario-100: #CED4DA;
-    --color-terciario-200: #ADB5BD;
-    --color-terciario-300: #868E96;
     --color-terciario-400: #485057;
     --color-terciario-500: #343A40;
 
     --fuente-inter: "Inter", sans-serif;
-    --fuente-montserrat: 'Montserrat', sans-serif;
 }
 
 /* Estilos generales */
